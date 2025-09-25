@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -19,7 +18,7 @@ namespace StoredToClass
 {
     public partial class Form1 : Form
     {
-        public SynchronizationContext Context { get; set; }
+	    private SynchronizationContext Context { get; }
         
         public Form1()
         {
@@ -362,7 +361,16 @@ namespace StoredToClass
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+	        Properties.Settings.Default.DB2 = txtDatabase.Text;
+	        Properties.Settings.Default.DS2 = txtServer.Text;
+	        Properties.Settings.Default.User2 = txtUserId.Text;
+	        Properties.Settings.Default.Password2 = txtPassword.Text;
+	        Properties.Settings.Default.Query2 = txtQuery.Text;
+	        Properties.Settings.Default.OutputText2 = txtOutput.Text;
+	        Properties.Settings.Default.Json = txtJSON.Text;
+	        Properties.Settings.Default.Api = txtAPI.Text;
+	        Properties.Settings.Default.Save();
+	        Application.Exit();
         }
     }
 }

@@ -18,7 +18,7 @@ namespace StoredToClass
 {
     public partial class Form2 : Form
     {
-        public SynchronizationContext Context { get; set; }
+	    private SynchronizationContext Context { get; }
         
         public Form2()
         {
