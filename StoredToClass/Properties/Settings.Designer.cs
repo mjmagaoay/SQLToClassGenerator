@@ -214,5 +214,29 @@ namespace StoredToClass.Properties {
                 this["DefaultServer"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Query2Executed {
+            get {
+                return ((bool)(this["Query2Executed"]));
+            }
+            set {
+                this["Query2Executed"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Query1Executed {
+            get {
+                return ((bool)(this["Query1Executed"]));
+            }
+            set {
+                this["Query1Executed"] = value;
+            }
+        }
     }
 }
